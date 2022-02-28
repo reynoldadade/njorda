@@ -56,5 +56,6 @@ export default {
   border-right: 120px solid transparent;
   border-bottom: 120px solid black;
   transition: all 1.5s; /* smooth transtion */
+  transform: rotate(0deg);
 }
 </style>
