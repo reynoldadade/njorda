@@ -48,7 +48,9 @@ export default {
   align-items: center;
   width: 100%;
   height: 100vh;
+  background-color: darkgrey;
 }
+
 .arrow-up {
   width: 0;
   height: 0;
