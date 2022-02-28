@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import { gsap } from 'gsap'
+// import { gsap } from 'gsap'
 export default {
   name: 'NuxtTutorial',
   data() {
@@ -23,17 +23,18 @@ export default {
   },
   computed: {
     fullRotation() {
+      // full rotation will be the number of 360 degree in the total number of angles
+      // in the rotation
+
       return Math.floor(this.rotation / 360)
     },
   },
   methods: {
     rotateAt20() {
       this.rotation += 20
-      gsap.to('.arrow-up', {
-        duration: 1,
-        rotation: this.rotation,
-        transformOrigin: '50% 50%',
-      })
+      document.getElementById(
+        'triangle'
+      ).style.transform = `rotate(${this.rotation}deg)`
     },
   },
 }
@@ -54,6 +55,6 @@ export default {
   border-left: 120px solid transparent;
   border-right: 120px solid transparent;
   border-bottom: 120px solid black;
-  /* border-image: linear-gradient(to right, red, yellow); */
+  transition: all 1.5s; /* smooth transtion */
 }
 </style>
